@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="text-center"><h1> Have a look at the available ghosts: </h1> </div>
+  <% @ghosts.each do |ghost| %>
+    <div class="card-category">
+    <%= link_to ghost.name, ghost_path(ghost) %>
+    </div>
+  <% end %>
+  <%= link_to 'Add a new ghost', new_ghost_path, class: 'btn btn-primary' %> </p>
+</div>
