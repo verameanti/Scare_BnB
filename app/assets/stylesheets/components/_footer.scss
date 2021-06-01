@@ -7,24 +7,37 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   justify-content: center;
+  background-color: #f7f7f7;
+  color: #ff5a62;
+  border-top: solid 1px #ff5a62;
 
 }
 .footer-links {
   display: flex;
   align-items: center;
+  color: #ff5a62;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: #ff5a62;
+  // opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+
 }
 .footer-links a:hover {
   opacity: 1;
+  color: black;
 }
-.footer .fa-heart {
-  color: #D23333;
+.white-ghost {
+  color: #ff5a62;
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.footer-copyright{
+  padding-bottom: 5px;
+  flex-direction: horizontal;
 }
 
 
