@@ -1,9 +1,18 @@
 <div class="container">
   <div class="text-center"><h1> Have a look at the available ghosts: </h1> </div>
+  <div class="cards">
   <% @ghosts.each do |ghost| %>
-    <div class="card-category">
-    <%= link_to ghost.name, ghost_path(ghost) %>
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-trip-infos">
+        <div>
+       <h2> <%= link_to ghost.name, ghost_path(ghost) %> </h2>
+       <p> <%= ghost.description  %> </p>
+       </div>
+      <h2 class="card-trip-pricing">€<%= ghost.price%></h2>
+      </div>
     </div>
   <% end %>
-  <%= link_to 'Add a new ghost', new_ghost_path, class: 'btn btn-primary' %> </p>
+  </div>
+  <div class="text-center mg-16px"> <%= link_to 'Add a new ghost', new_ghost_path, class: 'btn btn-primary'%> </div>
 </div>
