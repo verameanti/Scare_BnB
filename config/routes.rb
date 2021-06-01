@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'ghosts#home'
+  root to: 'pages#home'
   resources :ghosts do
   resources :hauntings, only: [:new, :create]
   end
