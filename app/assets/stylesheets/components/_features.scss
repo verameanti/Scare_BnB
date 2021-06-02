@@ -1,0 +1,35 @@
+
+#features{
+  padding: 7% 15%;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.EU{
+  display: inline-block;
+  text-align: center;
+  text-size: 1.5rem;
+  padding: 5%;
+  // space-between: 10px;
+}
+
+
+.container-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // margin-top: 30px;
+  // margin-bottom: 30px;
+  grid-gap: 16px;
+  margin: 16px;
+  // justify-content: between;
+}
+
+.card{
+  // grid-gap: space-between;
+  margin: 16px;
+}
+
+.featured-ghosts{
+  justify-content: center;
+}
