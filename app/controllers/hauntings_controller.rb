@@ -9,14 +9,14 @@ class HauntingsController < ApplicationController
   end
 
   def create
-    @ghost = Ghost.find([:id])
+    @ghost = Ghost.find(params[:ghost_id])
     @haunting = Haunting.new(params[haunting_params])
     @haunting.user = current_user
     @haunting.ghost = @ghost
     if @haunting.save
       redirect_to haunting_path(@haunting)
     else
-      render 'new'
+      render :template => "ghosts/show"
     end
   end
 
