@@ -6,8 +6,8 @@
           <h3>Add a new ghost:</h3>
           <%= simple_form_for(@ghost) do |g| %>
         <%= g.input :name %>
-        <%= g.input :era %>
-        <%= g.input :category %>
+        <%= g.input :era, :collection => %w[Victorian Modern 1950s WW2 Romanintic Stuart 1920s Medieval Colonial] %>
+        <%= g.input :category, :collection => %w[Scary Friendly Jovial Grumpy Mischevious]%>
         <%= g.input :description %>
         <%= g.input :price %>
         <%= g.submit class: 'btn btn-success' %>
@@ -17,3 +17,4 @@
     </div>
   </div>
 </div>
+
