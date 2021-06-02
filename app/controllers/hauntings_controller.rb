@@ -9,8 +9,15 @@ class HauntingsController < ApplicationController
   end
 
   def create
+    @ghost = Ghost.find([:id])
     @haunting = Haunting.new(params[haunting_params])
-    @haunting.save
+    @haunting.user = current_user
+    @haunting.ghost = @ghost
+    if @haunting.save
+      redirect_to haunting_path(@haunting)
+    else
+      render 'new'
+    end
   end
 
   def destroy
