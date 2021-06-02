@@ -1,9 +1,21 @@
-<h1>Hauntings</h1>
-<p>You have a new haunting</p>
-<p><%= @haunting.ghost.name %></p>
-<p><%= @haunting.ghost.user.email %></p>
-<p><%= @haunting.user.email %></p>
-<br>
-<p>Start Date: <%= @haunting.start_date %></p>
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Yay!</strong> 🎉 you successfully booked a haunting!</span>
+  <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
+</div>
+
+<div class="container">
+<h1 class="text-center">Congrats! You booked a Haunting with <%= @haunting.ghost.name %> </h1>
+  <div class="card">
+    <h2>You're new haunting details: </h2>
+    <p>Ghost: <%= @haunting.ghost.name %></p>
+    <p>Owner: <%= @haunting.ghost.user.email %></p>
+  </div>
+<!-- <p>Start Date: <%= @haunting.start_date %></p>
 <p>End Date: <%= @haunting.end_date %></p>
-<p>Location: <%= @haunting.location %></p>
+<p>Location: <%= @haunting.location %></p> -->
+ <br>
+ <%= link_to 'Go back', ghost_path(@haunting.ghost), class: 'btn btn-primary' %>
+ <%= link_to 'Look at more ghosts', ghosts_path, class: 'btn btn-primary' %>
+ </div>

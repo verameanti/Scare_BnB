@@ -12,6 +12,8 @@
             <p> Category: <%= @ghost.category %></p>
             <p> Description: <%= @ghost.description %></p>
             <p> Price: €<%= @ghost.price %></p>
+            <br>
+            <h2> Book <%= @ghost.name %> for a Haunting: </h2>
             <%= simple_form_for [@ghost, @haunting] do |g| %>
               <%= g.input :start_date %>
               <%= g.input :end_date %>
@@ -22,6 +24,7 @@
       </div>
     </div>
   </div>
+  <br>
  <%= link_to 'Go back', ghosts_path, class: 'btn btn-primary' %>
 </div>
 </div>
