@@ -35,8 +35,8 @@ puts "Finished creating users.."
 # file7 = URI.open('')
 # file8 = URI.open('')
 # file9 = URI.open('')
-file10 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630914/Old_man_withers_zppcun.jpg')
-# file11 = URI.open('')
+file10 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/Old_man_withers_zppcun.jpg')
+file11 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/Captain_Blackbeard_wd356u.png')
 # file12 = URI.open('')
 
 puts "Creating ghosts.."
@@ -52,6 +52,8 @@ puts "Creating ghosts.."
 ghost10 = Ghost.new(name:"Old Man Withers", era:"World War 2", category:"friendly", description:"In need of some fatherly advice? The former Naval officer is perfect for you", price: 35, user: user10)
 ghost10.photos.attach(io: file10, filename: 'file10.png', content_type: 'image/png')
 ghost10.save!
-# ghost11 = Ghost.new(name:"Captain Blackbeard", era:"Colonial", category:"jovial", description:"A jolly pirate captain, will be the death and soul of any party!", price: 25, user: user11)
+ghost11 = Ghost.new(name:"Captain Blackbeard", era:"Colonial", category:"jovial", description:"A jolly pirate captain, will be the death and soul of any party!", price: 25, user: user11)
+ghost11.photos.attach(io: file11, filename: 'file11.png', content_type: 'image/png')
+ghost11.save!
 # ghost12 = Ghost.new(name:"Nicolas Hinault", era:"Modern", category:"scary", description:"After he won the Tour de France his heart exploded, perfect for haunting motor-heads!", price: 30, user: user12)
 puts "Finished creating ghosts.."
