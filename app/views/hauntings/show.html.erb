@@ -22,10 +22,12 @@
       </div>
     </div>
   </div>
+ </div>
+ <br>
+ <div class="text-center mg-16px">
+  <%= link_to 'Go back', ghost_path(@haunting.ghost), class: 'btn btn-primary' %>
+ <%= link_to 'Look at more ghosts', ghosts_path, class: 'btn btn-primary' %>
+</div>
 <!-- <p>Start Date: <%= @haunting.start_date %></p>
 <p>End Date: <%= @haunting.end_date %></p>
 <p>Location: <%= @haunting.location %></p> -->
- <br>
- <%= link_to 'Go back', ghost_path(@haunting.ghost), class: 'btn btn-primary' %>
- <%= link_to 'Look at more ghosts', ghosts_path, class: 'btn btn-primary' %>
- </div>
