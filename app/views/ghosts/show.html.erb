@@ -12,6 +12,12 @@
             <p> Category: <%= @ghost.category %></p>
             <p> Description: <%= @ghost.description %></p>
             <p> Price: €<%= @ghost.price %></p>
+            <%= simple_form_for [@ghost, @haunting] do |g| %>
+              <%= g.input :start_date %>
+              <%= g.input :end_date %>
+              <%= g.input :location %>
+              <%= g.submit class: 'btn btn-success' %>
+            <% end %>
           </div>
       </div>
     </div>
