@@ -1,0 +1,49 @@
+.home {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 60vh;
+  margin-top:0px;
+  padding-top:60px;
+  display: flex;
+  position: relative;
+
+}
+
+.home-title {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto;
+
+
+}
+
+.h1-title{
+  position:absolute;
+  align-items: center;
+  top: 150px;
+  left:250px;
+  justify-content: center;
+
+}
+
+.h1-title p{
+  color:red;
+}
+
+.home-page {
+  font-size: 20px;
+  color: red;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn-flat{
+  color: white;
+  right: 30px;
+  border: solid white;
+}
+

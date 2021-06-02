@@ -1,0 +1,33 @@
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Yay!</strong> 🎉 you successfully booked a haunting!</span>
+  <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Congrats! You booked a Haunting with <%= @haunting.ghost.name %> </h1>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-trip">
+         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2>You're new haunting details: </h2>
+              <p>Ghost: <%= @haunting.ghost.name %></p>
+              <p>Owner: <%= @haunting.ghost.user.email %></p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ <br>
+ <div class="text-center mg-16px">
+  <%= link_to 'Go back', ghost_path(@haunting.ghost), class: 'btn btn-primary' %>
+ <%= link_to 'Look at more ghosts', ghosts_path, class: 'btn btn-primary' %>
+</div>
+<!-- <p>Start Date: <%= @haunting.start_date %></p>
+<p>End Date: <%= @haunting.end_date %></p>
+<p>Location: <%= @haunting.location %></p> -->

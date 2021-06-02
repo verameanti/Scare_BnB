@@ -6,6 +6,7 @@ class GhostsController < ApplicationController
 
   def show
     @ghost = Ghost.find(params[:id])
+    @haunting = Haunting.new
   end
 
   def new
