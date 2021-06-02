@@ -6,11 +6,21 @@
 </div>
 
 <div class="container">
-<h1 class="text-center">Congrats! You booked a Haunting with <%= @haunting.ghost.name %> </h1>
-  <div class="card">
-    <h2>You're new haunting details: </h2>
-    <p>Ghost: <%= @haunting.ghost.name %></p>
-    <p>Owner: <%= @haunting.ghost.user.email %></p>
+  <h1 class="text-center">Congrats! You booked a Haunting with <%= @haunting.ghost.name %> </h1>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-trip">
+         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2>You're new haunting details: </h2>
+              <p>Ghost: <%= @haunting.ghost.name %></p>
+              <p>Owner: <%= @haunting.ghost.user.email %></p>
+            </div>
+          </div>
+      </div>
+    </div>
   </div>
 <!-- <p>Start Date: <%= @haunting.start_date %></p>
 <p>End Date: <%= @haunting.end_date %></p>
