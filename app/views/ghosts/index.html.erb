@@ -3,7 +3,7 @@
   <div class="cards">
   <% @ghosts.each do |ghost| %>
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <%= cl_image_tag(ghost.photos.first.key) %>
       <div class="card-trip-infos">
         <div>
        <h2> <%= link_to ghost.name, ghost_path(ghost) %> </h2>
