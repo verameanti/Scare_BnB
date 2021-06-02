@@ -5,6 +5,11 @@
   // margin: px;
 }
 
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
