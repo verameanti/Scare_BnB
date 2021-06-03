@@ -20,23 +20,28 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
 
     markers.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window);
+
+  // Create a HTML element for your custom marker
+      const element = document.createElement('div');
+      element.className = 'marker';
+      element.style.backgroundImage = `url('${marker.image_url}')`;
+      element.style.backgroundSize = 'contain';
+      element.style.width = '25px';
+      element.style.height = '25px';
+
+  // Pass the element as an argument to the new marker
       new mapboxgl.Marker(element)
-        .setLngLat([ marker.lng, marker.lat ])
-        .addTo(map);
+        .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
-
-    fitMapToMarkers(map, markers);
-
-    const popup = new mapboxgl.Popup().setHTML(marker.info_window);
-
-    const element = document.createElement('div');
-    element.className = 'marker';
-    element.style.backgroundImage = `url('${marker.image_url}')`;
-    element.style.backgroundSize = 'contain';
-    element.style.width = '25px';
-    element.style.height = '25px';
+        .addTo(map);
     });
-};
+        fitMapToMarkers(map, markers);
+
+  }
+    // [ ... ]
+  };
+
     // Pass the element as an argument to the new marker
 
 
