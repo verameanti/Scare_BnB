@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
 .home {
   background-size: cover;
   background-position: center;
@@ -7,18 +9,17 @@
   padding-top:60px;
   display: flex;
   position: relative;
-
+  box-shadow: 3px 3px 3px 0 black;
 }
 
 .home-title {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 60px;
   font-weight: bold;
   margin: 0 auto;
-
-
+  font-family: 'Odibee Sans', cursive;
 }
 
 .h1-title{
@@ -27,7 +28,6 @@
   top: 150px;
   left:250px;
   justify-content: center;
-
 }
 
 .h1-title p{
