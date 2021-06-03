@@ -5,11 +5,13 @@
   <div class="card">
     <div class="card-trip">
 
+
       <% if @ghost.photos.attached? %>
         <%= cl_image_tag(@ghost.photos.first.key) %>
       <% else %>
         <%= cl_image_tag("https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622714025/ghostbusters-logo_cqzclk.jpg") %>
       <% end %>
+
 
         <div class="card-trip-infos">
           <div>
@@ -32,6 +34,13 @@
   </div>
   <br>
  <%= link_to 'Go back', ghosts_path, class: 'btn btn-primary' %>
+  <% if  current_user['id'] == @ghost.user_id%>
+     <%= link_to 'delete', ghost_path(@ghost),method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger'%>
+   <% end %>
+   <% if current_user['id'] == @ghost.user_id %>
+     <%= link_to 'update', edit_ghost_path(@ghost), class: 'btn btn-danger' %>
+   <% end %>
+
 </div>
 </div>
   </div>
