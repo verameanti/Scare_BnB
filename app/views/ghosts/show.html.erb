@@ -4,7 +4,7 @@
     <div class="col-12 col-lg-6">
   <div class="card">
     <div class="card-trip">
-      <%= cl_image_tag(@ghost.photos.first.key) %>
+      <%#= cl_image_tag(@ghost.photos.first.key) %>
         <div class="card-trip-infos">
           <div>
             <h2><%= @ghost.name %></h2>
@@ -26,6 +26,9 @@
   </div>
   <br>
  <%= link_to 'Go back', ghosts_path, class: 'btn btn-primary' %>
+  <% if 1 +1 == 2 %>
+     <%= link_to 'delete', ghost_path(@ghost),method: :delete, class: 'btn btn-primary'%>
+   <% end %>
 </div>
 </div>
   </div>

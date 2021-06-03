@@ -30,6 +30,9 @@ class GhostsController < ApplicationController
   end
 
   def destroy
+    @ghost = Ghost.find(params[:id])
+    @ghost.destroy
+    redirect_to ghosts_path
   end
 
 private
