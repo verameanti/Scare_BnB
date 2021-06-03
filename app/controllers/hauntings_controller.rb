@@ -5,7 +5,9 @@ class HauntingsController < ApplicationController
     @markers = @hauntings.geocoded.map do |haunting|
       {
         lat: haunting.latitude,
-        lng: haunting.longitude
+        lng: haunting.longitude,
+        # info_window: render_to_string(partial: "infowindow", locals: { haunting: haunting }),
+        image_url: helpers.asset_url('/assets/logo.png')
       }
     end
   end
