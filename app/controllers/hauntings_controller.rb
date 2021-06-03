@@ -2,6 +2,12 @@ class HauntingsController < ApplicationController
 
   def index
     @hauntings = Haunting.order(:start_date)
+    @markers = @hauntings.geocoded.map do |haunting|
+      {
+        lat: haunting.latitude,
+        lng: haunting.longitude
+      }
+    end
   end
 
   def show
