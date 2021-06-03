@@ -35,7 +35,7 @@ class GhostsController < ApplicationController
 private
 
   def ghost_params
-    params.require(:ghost).permit(:name, :era, :category, :description, :price)
+    params.require(:ghost).permit(:name, :era, :category, :description, :price, photos: [])
   end
 
 end

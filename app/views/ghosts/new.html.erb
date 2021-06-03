@@ -10,6 +10,7 @@
         <%= g.input :category, :collection => %w[Scary Friendly Jovial Grumpy Mischevious]%>
         <%= g.input :description %>
         <%= g.input :price %>
+        <%= g.input :photos, as: :file, input_html: { multiple: true } %>
         <%= g.submit class: 'btn btn-success' %>
       <% end %>
         </div>
