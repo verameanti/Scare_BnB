@@ -1,13 +1,17 @@
 <div class="home-video-wrapper">
   <%= video_tag "/assets/forestroad.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
-  <div class="h1-title"> <h1 class="home-title">Welcome to <strong>scarebnb</strong>!</h1>
-    <div> <p>Haunt your friends and family for a reasonable price👻</p>
+</div>
+<div class="h1-title">
+  <h1 class="home-title">Welcome to <strong>scarebnb</strong>!</h1>
+    <div>
+      <p>Haunt your friends and family for a reasonable price👻</p>
       <p> <%= link_to 'Book a Ghost', ghosts_path, class: 'btn btn-flat' %>
       <%= link_to 'Add a Ghost', new_ghost_path, class: 'btn btn-flat' %> </p>
-
+    </div>
+</div>
 
 <div>
-<h2>Featured Ghosts</h2>
+  <h2>Featured Ghosts</h2>
 <div style="display: flex; justify-content: center;">
   <div class="container-cards">
    <div class="card-home" style="width: 18rem;">
