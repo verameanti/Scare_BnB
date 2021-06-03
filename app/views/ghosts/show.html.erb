@@ -4,7 +4,15 @@
     <div class="col-12 col-lg-6">
   <div class="card">
     <div class="card-trip">
-      <%#= cl_image_tag(@ghost.photos.first.key) %>
+
+
+      <% if @ghost.photos.attached? %>
+        <%= cl_image_tag(@ghost.photos) %>
+      <% else %>
+        <%= cl_image_tag("https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622714025/ghostbusters-logo_cqzclk.jpg") %>
+      <% end %>
+
+
         <div class="card-trip-infos">
           <div>
             <h2><%= @ghost.name %></h2>
