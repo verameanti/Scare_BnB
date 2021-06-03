@@ -11,7 +11,11 @@
     <div class="col-12 col-lg-6">
       <div class="card">
         <div class="card-trip">
-         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <% if @haunting.ghost.photos.attached? %>
+            <%= cl_image_tag(@haunting.ghost.photos) %>
+          <% else %>
+            <%= cl_image_tag("https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622714025/ghostbusters-logo_cqzclk.jpg") %>
+          <% end %>
           <div class="card-trip-infos">
             <div>
               <h2>You're new haunting details: </h2>

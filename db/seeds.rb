@@ -35,7 +35,7 @@ file6 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630913/
 file7 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630913/pretty_boy_lloyd_tbovax.jpg')
 file8 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1622630913/Sir_Hansel_kdpmrq.jpg')
 file9 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630913/bobo_the_clown_b7hln4.jpg')
-file10 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630914/Old_man_withers_zppcun.jpg')
+file10 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622630914/Old_man_withers_zppcun.jpg')
 file11 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622637345/h6r8vqzuxwby77fjymbclieiyzee.png')
 file12 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630913/Cyclist_ghost_vudzdz.jpg')
 
@@ -43,7 +43,7 @@ puts "Creating ghosts.."
 ghost1 = Ghost.new(name:"Lady Button", era:"Victorian", category:"Scary", description:"A classic poltergeist, perfect for first time hauntees.", price: 10, user: user1)
 ghost1.photos.attach(io: file1, filename: 'file1.png', content_type: 'image/png')
 ghost1.save!
-ghost2 = Ghost.new(name:"James Moran", era:"Modern", category:"Grumpy", description:"For causing mild annoyance there's no-one finer, perfect for petty revenge", price: 3, user: user2)
+ghost2 = Ghost.new(name:"Old Hamlet", era:"Modern", category:"Grumpy", description:"For causing mild annoyance there's no-one finer, perfect for petty revenge", price: 3, user: user2)
 ghost2.photos.attach(io: file2, filename: 'file2.png', content_type: 'image/png')
 ghost2.save!
 ghost3 = Ghost.new(name:"Caspar", era:"1950s", category:"Friendly", description:"A child-friendly boy ghost who can act as a good companion", price: 5, user: user3)
