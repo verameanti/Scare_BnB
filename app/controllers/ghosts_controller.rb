@@ -24,9 +24,16 @@ class GhostsController < ApplicationController
   end
 
   def edit
+    @ghost = Ghost.find(params[:id])
   end
 
   def update
+    @ghost = Ghost.find(params[:id])
+    if @ghost.update(ghost_params)
+      redirect_to ghost_path(@ghost)
+    else
+      render :edit
+    end
   end
 
   def destroy

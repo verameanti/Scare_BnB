@@ -34,9 +34,13 @@
   </div>
   <br>
  <%= link_to 'Go back', ghosts_path, class: 'btn btn-primary' %>
-  <% if 1 +1 == 2 %>
-     <%= link_to 'delete', ghost_path(@ghost),method: :delete, class: 'btn btn-primary'%>
+  <% if  current_user['id'] == @ghost.user_id%>
+     <%= link_to 'delete', ghost_path(@ghost),method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger'%>
    <% end %>
+   <% if current_user['id'] == @ghost.user_id %>
+     <%= link_to 'update', edit_ghost_path(@ghost), class: 'btn btn-danger' %>
+   <% end %>
+
 </div>
 </div>
   </div>
