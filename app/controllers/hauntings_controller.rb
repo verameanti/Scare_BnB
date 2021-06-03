@@ -1,7 +1,7 @@
 class HauntingsController < ApplicationController
 
   def index
-    @hauntings = Haunting.all
+    @hauntings = Haunting.order(:start_date)
   end
 
   def show
@@ -10,9 +10,10 @@ class HauntingsController < ApplicationController
 
   def create
     @ghost = Ghost.find(params[:ghost_id])
-    @haunting = Haunting.new(params[haunting_params])
+    @haunting = Haunting.new(haunting_params)
     @haunting.user = current_user
     @haunting.ghost = @ghost
+    # raise
     if @haunting.save
       redirect_to haunting_path(@haunting)
     else
