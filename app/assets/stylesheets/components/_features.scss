@@ -28,6 +28,8 @@
 .card-home{
   // grid-gap: space-between;
   margin: 16px;
+  border-radius: 10%;
+  border-box: 3px 3px 3px 0;
 }
 
 .featured-ghosts{
@@ -37,14 +39,29 @@
 img{
   object-fit:contain;
   width: 100%;
+  border-box: 3px 3px 3px 0 black;
+  border-radius: 10px;
+
 }
 
 .card-text {
   text-align: center;
   font-weight: bold;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 25px;
+  color: red;
 }
-//     vertical-align: middle;
-    // border-style: none;
-    // height: 299px;
-    // width: 300;
-    // justify-content: space-around
+
+.card-text:hover{
+  color: black;
+}
+h2{
+ margin-top: 20px;
+ text-align: center;
+ font-family: 'Odibee Sans', cursive;
+ color: red;
+}
+
+.home-page{
+  background-color: #201F1F;
+}
