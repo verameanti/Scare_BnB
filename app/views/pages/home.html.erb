@@ -1,17 +1,50 @@
-
-<body class="home-page">
-<div class="banner home" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1534193708707-6be94c4f67d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);">
-  <div class="container">
-
-   <div class="h1-title"><h1 class="home-title">Welcome to <strong>scarebnb</strong>!</h1><p>Haunt your friends and family for a reasonable price👻</p>
-     <!-- <div class="h2-title" <p class="home-page">Haunt your friends and family for a reasonable price👻</p> -->
-      <p><%= link_to 'Book a Ghost', ghosts_path, class: 'btn btn-flat' %>
+<div class="home-video-wrapper">
+  <%= video_tag "/assets/forestroad.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+  <div class="h1-title"> <h1 class="home-title">Welcome to <strong>scarebnb</strong>!</h1>
+    <div> <p>Haunt your friends and family for a reasonable price👻</p>
+      <p> <%= link_to 'Book a Ghost', ghosts_path, class: 'btn btn-flat' %>
       <%= link_to 'Add a Ghost', new_ghost_path, class: 'btn btn-flat' %> </p>
+
+
+<div>
+<h2>Featured Ghosts</h2>
+<div style="display: flex; justify-content: center;">
+  <div class="container-cards">
+   <div class="card-home" style="width: 18rem;">
+    <img src="https://images.unsplash.com/photo-1601496319406-21021f4f60bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Michael Jackson</p>
+    </div>
+  </div>
+  <div class="card-home" style="width: 18rem;">
+    <img src="https://images.unsplash.com/photo-1587356315079-3178211b3166?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Elvis Presley</p>
+    </div>
+  </div>
+  <div class="card-home" style="width: 18rem;">
+    <img src="https://images.unsplash.com/photo-1604186838347-9faaf0b83be8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="...">
+    <div class="card-body">
+      <p class="card-text">The Headless Horseman</p>
     </div>
   </div>
 </div>
-<h2>Featured Ghosts</h2>
 
+</div>
+
+<!-- <body class="home-page"> -->
+<!--  <div class="banner home" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1534193708707-6be94c4f67d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);"> -->
+  <!-- <div class="container"> -->
+  <!--  <div class="h1-title"><h1 class="home-title">Welcome to <strong>scarebnb</strong>!</h1><p>Haunt your friends and family for a reasonable price👻</p>
+     <div class="h2-title" <p class="home-page">Haunt your friends and family for a reasonable price👻</p>
+      <p><%= link_to 'Book a Ghost', ghosts_path, class: 'btn btn-flat' %>
+      <%= link_to 'Add a Ghost', new_ghost_path, class: 'btn btn-flat' %> </p>
+    </div>
+  </div> -->
+<!-- </div> -->
+
+<!--
+<h2>Featured Ghosts</h2>
 <div style="display: flex; justify-content: center;">
   <div class="container-cards">
    <div class="card-home" style="width: 18rem;">
@@ -35,7 +68,7 @@
 
   </div>
 </div>
-</body>
+</body> -->
 
 
 <!-- ____________ -->
