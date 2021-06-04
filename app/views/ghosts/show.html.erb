@@ -1,11 +1,9 @@
 <div class="container">
-  <div class="text-center"><h1 class="g_show_h1"> The Ghost you chose is: <%= @ghost.name %> </h1></div>
    <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
-  <div class="card">
+  <div class="card-show">
+    <h1> <%= @ghost.name %> </h1>
     <div class="card-trip">
-
-
       <% if @ghost.photos.attached? %>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -29,9 +27,8 @@
       <% end %>
 
 
-        <div class="card-trip-infos">
+        <div class="card-trip-infos-show">
           <div>
-            <h2><%= @ghost.name %></h2>
             <p>Era: <%= @ghost.era %></p>
             <p> Category: <%= @ghost.category %></p>
             <p> Description: <%= @ghost.description %></p>
@@ -41,20 +38,20 @@
             <%= simple_form_for [@ghost, @haunting] do |g| %>
               <%= g.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               <%= g.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-              <%= g.input :location %>
-              <%= g.submit class: 'btn btn-success' %>
+              <%= g.input :location, placeholder: 'Haunted Tower, Transylvania, GH0 8T8' %>
+              <%= g.submit class: 'btn btn-nice' %>
             <% end %>
           </div>
       </div>
     </div>
   </div>
   <br>
- <%= link_to 'Go back', ghosts_path, class: 'btn btn-primary' %>
+ <%= link_to 'Go back', ghosts_path, class: 'btn btn-nice' %>
   <% if  current_user['id'] == @ghost.user_id%>
-     <%= link_to 'delete', ghost_path(@ghost),method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger'%>
+     <%= link_to 'Delete', ghost_path(@ghost),method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-nice'%>
    <% end %>
    <% if current_user['id'] == @ghost.user_id %>
-     <%= link_to 'update', edit_ghost_path(@ghost), class: 'btn btn-danger' %>
+     <%= link_to 'Update', edit_ghost_path(@ghost), class: 'btn btn-nice' %>
    <% end %>
 
 </div>
