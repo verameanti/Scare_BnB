@@ -7,32 +7,34 @@
 
 <div class="container">
   <h1 class="text-center">Congrats! You booked a Haunting with <%= @haunting.ghost.name %> </h1>
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-6">
-      <div class="card">
-        <div class="card-trip">
-          <% if @haunting.ghost.photos.attached? %>
-            <%= cl_image_tag(@haunting.ghost.photos.first.key) %>
-          <% else %>
-            <%= cl_image_tag("https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622714025/ghostbusters-logo_cqzclk.jpg") %>
-          <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2>You're new haunting details: </h2>
-              <p>Ghost: <%= @haunting.ghost.name %></p>
-              <p>Owner: <%= @haunting.ghost.user.email %></p>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-trip">
+            <% if @haunting.ghost.photos.attached? %>
+              <%= cl_image_tag(@haunting.ghost.photos.first.key) %>
+            <% else %>
+              <%= cl_image_tag("https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622714025/ghostbusters-logo_cqzclk.jpg") %>
+            <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2>You're new haunting details: </h2>
+                <p>Ghost: <%= @haunting.ghost.name %></p>
+                <p>Owner: <%= @haunting.ghost.user.email %></p>
+              </div>
             </div>
-          </div>
+        </div>
       </div>
     </div>
+   </div>
+   <br>
+   <div class="text-center mg-16px">
+    <%= link_to 'Go back', ghost_path(@haunting.ghost), class: 'btn btn-nice' %>
+   <%= link_to 'Look at more ghosts', ghosts_path, class: 'btn btn-nice' %>
+   <%= link_to "View all hauntings", "/hauntings", class: "btn btn-nice" %>
   </div>
- </div>
- <br>
- <div class="text-center mg-16px">
-  <%= link_to 'Go back', ghost_path(@haunting.ghost), class: 'btn btn-nice' %>
- <%= link_to 'Look at more ghosts', ghosts_path, class: 'btn btn-nice' %>
- <%= link_to "View all hauntings", "/hauntings", class: "btn btn-nice" %>
 </div>
+
 <!-- <p>Start Date: <%= @haunting.start_date %></p>
 <p>End Date: <%= @haunting.end_date %></p>
 <p>Location: <%= @haunting.location %></p> -->
