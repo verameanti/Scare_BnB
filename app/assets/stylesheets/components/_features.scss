@@ -54,10 +54,22 @@ img{
   font-family: 'Spectral', serif;;
   font-size: 25px;
   color: white;
+
 }
 
+.card-texting{
+  margin-top: 45px;
+   text-align: center;
+  font-weight: bold;
+  font-family: 'Spectral', serif;;
+  font-size: 25px;
+  color: white;
+}
 .card-text:hover{
   color: grey;
+}
+.card-texting:hover{
+  color:grey;
 }
 h2{
  margin-top: 20px;
