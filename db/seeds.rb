@@ -8,7 +8,7 @@
 require "open-uri"
 
 User.destroy_all
-Ghost.destroljo
+Ghost.destroy_all
 
 puts "Creating users.."
 user1 = User.create!(first_name:"Vera", last_name:"Meanti", email:"verameanti@email.com", password:"123456")
