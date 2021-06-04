@@ -46,12 +46,12 @@
     </div>
   </div>
   <br>
- <%= link_to 'Go back', ghosts_path, class: 'btn btn-primary' %>
+ <%= link_to 'Go back', ghosts_path, class: 'btn btn-nice' %>
   <% if  current_user['id'] == @ghost.user_id%>
-     <%= link_to 'delete', ghost_path(@ghost),method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger'%>
+     <%= link_to 'Delete', ghost_path(@ghost),method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-nice'%>
    <% end %>
    <% if current_user['id'] == @ghost.user_id %>
-     <%= link_to 'update', edit_ghost_path(@ghost), class: 'btn btn-danger' %>
+     <%= link_to 'Update', edit_ghost_path(@ghost), class: 'btn btn-nice' %>
    <% end %>
 
 </div>
