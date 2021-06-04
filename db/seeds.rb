@@ -23,6 +23,8 @@ user9 = User.create!(first_name:"Felix", last_name:"Altenburg", email:"felix@ema
 user10 = User.create!(first_name:"Marcus", last_name:"Allen", email:"marcus@email.com", password:"123456")
 user11 = User.create!(first_name:"Spencer", last_name:"Ryton", email:"spencer@email.com", password:"123456")
 user12 = User.create!(first_name:"Chloé", last_name:"Avenas", email:"chloe@email.com", password:"123456")
+user13 = User.create!(first_name:"Veni", last_name:"Aljo", email:"veni@email.com", password:"123456")
+user14 = User.create!(first_name:"Beatriz", last_name:"Galindo", email:"beatriz@email.com", password:"123456")
 
 puts "Finished creating users.."
 
@@ -38,12 +40,18 @@ file9 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630913/
 file10 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622630914/Old_man_withers_zppcun.jpg')
 file11 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622637345/h6r8vqzuxwby77fjymbclieiyzee.png')
 file12 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622630913/Cyclist_ghost_vudzdz.jpg')
+file13 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622800866/Trevor_a48qo7.jpg')
+file14 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622800866/trevor-closeup_prmuhc.jpg')
+file15 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622800866/trevor-otherside_higl5u.png')
+file16 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622752233/hannibal_hector1_tas7xh.jpg')
+file17 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622752233/Hannibal-hector2_m2aepp.jpg')
+file18 = URI.open('https://res.cloudinary.com/dbe4hul9k/image/upload/v1622802744/hannibal-hector3_itkolx.jpg')
 
 puts "Creating ghosts.."
 ghost1 = Ghost.new(name:"Lady Button", era:"Victorian", category:"Scary", description:"A classic poltergeist, perfect for first time hauntees.", price: 10, user: user1)
 ghost1.photos.attach(io: file1, filename: 'file1.png', content_type: 'image/png')
 ghost1.save!
-ghost2 = Ghost.new(name:"Old Hamlet", era:"Modern", category:"Grumpy", description:"For causing mild annoyance there's no-one finer, perfect for petty revenge", price: 3, user: user2)
+ghost2 = Ghost.new(name:"Old Hamlet", era:"Romantic", category:"Grumpy", description:"For causing mild annoyance there's no-one finer, perfect for petty revenge", price: 3, user: user2)
 ghost2.photos.attach(io: file2, filename: 'file2.png', content_type: 'image/png')
 ghost2.save!
 ghost3 = Ghost.new(name:"Caspar", era:"1950s", category:"Friendly", description:"A child-friendly boy ghost who can act as a good companion", price: 5, user: user3)
@@ -73,7 +81,17 @@ ghost10.save!
 ghost11 = Ghost.new(name:"Captain Blackbeard", era:"Colonial", category:"Jovial", description:"A jolly pirate captain, will be the death and soul of any party!", price: 25, user: user11)
 ghost11.photos.attach(io: file11, filename: 'file11.png', content_type: 'image/png')
 ghost11.save!
-ghost12 = Ghost.new(name:"Nicolas Hinault", era:"Modern", category:"Scary", description:"After he won the Tour de France his heart exploded, perfect for haunting motor-heads!", price: 30, user: user12)
+ghost12 = Ghost.new(name:"Nicolas Hinault", era:"Modern", category:"Scary", description:"After he won the Tour de France his heart exploded, perfect for haunting motor-heads!", price: 25, user: user12)
 ghost12.photos.attach(io: file12, filename: 'file12.png', content_type: 'image/png')
 ghost12.save!
+ghost13 = Ghost.new(name:"Trevor", era:"1920s", category:"Grumpy", description:"A haunted doll that moves around when you're not looking. A prankster, a creep & might just kill you in your sleep.", price: 39, user: user13)
+ghost13.photos.attach(io: file13, filename: 'file13.png', content_type: 'image/png')
+ghost13.photos.attach(io: file14, filename: 'file14.png', content_type: 'image/png')
+ghost13.photos.attach(io: file15, filename: 'file15.png', content_type: 'image/png')
+ghost13.save!
+ghost14 = Ghost.new(name:"Hannibal Hector", era:"Modern", category:"Scary", description:"This former foodie has a taste for the finer things. Known to love throwing priceless artefacts around the room. Scary!", price: 55, user: user14)
+ghost14.photos.attach(io: file16, filename: 'file16.png', content_type: 'image/png')
+ghost14.photos.attach(io: file17, filename: 'file17.png', content_type: 'image/png')
+ghost14.photos.attach(io: file18, filename: 'file18.png', content_type: 'image/png')
+ghost14.save!
 puts "Finished creating ghosts.."
