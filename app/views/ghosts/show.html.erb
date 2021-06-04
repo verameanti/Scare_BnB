@@ -4,8 +4,6 @@
   <div class="card-show">
     <h1> <%= @ghost.name %> </h1>
     <div class="card-trip">
-
-
       <% if @ghost.photos.attached? %>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -38,8 +36,8 @@
             <br>
             <h2> Book <%= @ghost.name %> for a Haunting: </h2>
             <%= simple_form_for [@ghost, @haunting] do |g| %>
-              <%= g.input :start_date %>
-              <%= g.input :end_date %>
+              <%= g.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= g.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               <%= g.input :location %>
               <%= g.submit class: 'btn btn-success' %>
             <% end %>
