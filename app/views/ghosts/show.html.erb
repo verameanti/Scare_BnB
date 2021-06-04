@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="text-center"><h1> The Ghost you chose is: <%= @ghost.name %> </h1></div>
+  <div class="text-center"><h1 class="g_show_h1"> The Ghost you chose is: <%= @ghost.name %> </h1></div>
    <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
   <div class="card">
@@ -39,9 +39,9 @@
             <br>
             <h2> Book <%= @ghost.name %> for a Haunting: </h2>
             <%= simple_form_for [@ghost, @haunting] do |g| %>
-              <%= g.input :start_date %>
-              <%= g.input :end_date %>
-              <%= g.input :location %>
+              <%= g.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= g.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= g.input :location, placeholder: 'Haunted Tower, Transylvania, GH0 8T8' %>
               <%= g.submit class: 'btn btn-success' %>
             <% end %>
           </div>
