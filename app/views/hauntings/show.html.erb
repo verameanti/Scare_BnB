@@ -21,6 +21,8 @@
               <h2>You're new haunting details: </h2>
               <p>Ghost: <%= @haunting.ghost.name %></p>
               <p>Owner: <%= @haunting.ghost.user.email %></p>
+              <p>From: <%= @haunting.start_date.strftime("%d %B %Y") %>  </p>
+              <p>Until: <%= @haunting.end_date.strftime("%d %B %Y") %>  </p>
             </div>
           </div>
       </div>

@@ -36,8 +36,8 @@
             <br>
             <h2> Book <%= @ghost.name %> for a Haunting: </h2>
             <%= simple_form_for [@ghost, @haunting] do |g| %>
-              <%= g.input :start_date, as: :date, required: false, html5:true %>
-              <%= g.input :end_date, as: :date, required: false, html5:true %>
+              <%= g.input :start_date, as: :date, required: false, html5:true  %>
+              <%= g.input :end_date, as: :date, required: false, html5:true  %>
               <%= g.input :location, placeholder: 'Haunted Tower, Transylvania, GH0 8T8' %>
               <%= g.submit class: 'btn btn-nice' %>
             <% end %>
