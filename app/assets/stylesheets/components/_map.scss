@@ -1,0 +1,21 @@
+.grid-content {
+  margin-top: 61px;
+  display: flex;
+}
+
+.hauntings-grid {
+  min-width: 950px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.card-body {
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1.25em;
+  height: 115px;
+  transform: translateY(-50%);
+  transition: 0.2s;
+}
