@@ -14,3 +14,22 @@
   transition: 0.5s;
 
 }
+
+.btn-success {
+  background-color: #593C8F;
+  color: white;
+  border: none;
+}
+
+.btn-success:hover {
+  border: solid;
+  border-color: #593C8F;
+  background-color: white;
+  color: #593C8F;
+}
+
+.btn-success:focus {
+  background-color: #593C8F;
+  color: white;
+  border: none;
+}
