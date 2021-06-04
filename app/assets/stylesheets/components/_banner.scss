@@ -3,6 +3,7 @@
 .home {
   background-size: cover;
   background-position: center;
+  background-color: grey;
   padding: 150px 0;
   height: 60vh;
   margin-top:0px;
@@ -15,7 +16,7 @@
 .home-title {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 80px;
+  font-size: 100px;
   font-weight: bold;
   font-family: 'Odibee Sans', cursive;
   display: grid;
@@ -25,11 +26,11 @@
 
 .h1-title{
   position:absolute;
-  text-align: center;
+  // text-align: center;
   justify-content: center;
   display: grid;
   // place-items: center;
-  margin-top: 24px;
+  margin: 24px;
 }
 
 .h1-title p{

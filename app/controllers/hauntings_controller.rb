@@ -7,7 +7,7 @@ class HauntingsController < ApplicationController
         lat: haunting.latitude,
         lng: haunting.longitude,
         # info_window: render_to_string(partial: "infowindow", locals: { haunting: haunting }),
-        image_url: helpers.asset_url('icon.png')
+        image_url: helpers.asset_url('ghost.png')
       }
     end
   end
