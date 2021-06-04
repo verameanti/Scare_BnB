@@ -22,6 +22,7 @@
   // margin-bottom: 30px;
   grid-gap: 16px;
   margin: 16px;
+
   // justify-content: between;
 }
 
@@ -30,6 +31,7 @@
   margin: 16px;
   border-radius: 10%;
   border-box: 3px 3px 3px 0;
+
 }
 
 .featured-ghosts{
@@ -40,6 +42,10 @@ img{
   object-fit:contain;
   width: 100%;
   border-box: 3px 3px 3px 0 black;
+
+  // border-radius: 10px;
+  // box-shadow: 2px 2px 2px 0 black;
+
 }
 
 .card-text {
@@ -51,7 +57,7 @@ img{
 }
 
 .card-text:hover{
-  color: red;
+  color: grey;
 }
 h2{
  margin-top: 20px;
