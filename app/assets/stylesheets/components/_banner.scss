@@ -19,17 +19,22 @@
   font-weight: bold;
   font-family: 'Spectral', serif;
   display: grid;
-  place-items: center;
-  margin-top: 24px;
+  text-align: center;
+  margin-top: 55px;
 }
 
 .h1-title{
   position:absolute;
   text-align: center;
-  justify-content: center;
+  // justify-content: left;
   display: grid;
   // place-items: center;
+  margin: 0 auto;
   margin-top: 24px;
+  width: 100%;
+  padding-top: 70px;
+
+
 }
 
 .h1-title p{
@@ -47,5 +52,11 @@
   color: white;
   right: 30px;
   border: solid white;
+}
+
+.h2-home{
+  color:white;
+  font-size: 40px;
+  padding-top: 0;
 }
 
