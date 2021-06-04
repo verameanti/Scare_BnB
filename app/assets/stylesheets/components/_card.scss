@@ -24,8 +24,8 @@
   background: white;
   margin: 8px;
   border-radius: 5px;
-  border: solid 2px;
-  border-color: #8D0801;
+  // border: solid 2px;
+  // border-color: #8D0801;
 }
 
 .card-trip > img {
@@ -94,4 +94,12 @@
   border: solid;
   border-color: #8D0801;
   border-radius: 3px;
+}
+
+.ghosts-index-card {
+  border: solid;
+  border-color: #8D0801;
+  border-radius: 3px;
+  // box-shadow: 3px red;
+
 }
