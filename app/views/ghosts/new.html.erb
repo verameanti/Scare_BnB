@@ -6,15 +6,15 @@
           <h3>Add a new ghost:</h3>
           <%= simple_form_for(@ghost) do |g| %>
         <%= g.input :name %>
-        <%= g.input :era, :collection => %w[Victorian Modern 1950s WW2 Romanintic Stuart 1920s Medieval Colonial] %>
+        <%= g.input :era, :collection => %w[Victorian Modern 1950s WW2 Romantic Stuart 1920s Medieval Colonial] %>
         <%= g.input :category, :collection => %w[Scary Friendly Jovial Grumpy Mischevious]%>
         <%= g.input :description %>
         <%= g.input :price %>
         <%= g.input :photos, as: :file, input_html: { multiple: true } %>
-        <%= g.submit class: 'btn btn-success' %>
+        <%= g.submit class: 'btn btn-nice' %>
       <% end %>
         </div>
-      <%= link_to 'Go back', ghosts_path, class: 'btn btn-primary' %> </p>
+      <%= link_to 'Go back', ghosts_path, class: 'btn btn-nice nice' %> </p>
     </div>
   </div>
 </div>
