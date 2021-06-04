@@ -2,12 +2,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  border-radius: 10%;
   // margin: px;
 }
 
 .card {
   display: grid;
   grid-template-columns: 1fr;
+  border-radius: 10px;
 }
 
 .card-trip {
@@ -30,9 +32,10 @@
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 15px;
   opacity: .7;
   margin: 0;
+  color: #8D0801;
 }
 
 
