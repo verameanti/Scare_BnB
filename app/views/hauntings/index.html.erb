@@ -10,11 +10,11 @@
         <% end %>
       <div class="card-trip-infos">
         <div>
-        <h2>You’re new haunting details: </h2>
+        <h6>You’re new haunting details: </h6>
         <p>Ghost: <%= haunting.ghost.name %></p>
         <p>Owner: <%= haunting.ghost.user.email %> </p>
         </div>
-        <div class="text-center mg-16px"> <%= link_to 'View this haunting', haunting_path(haunting), class: 'btn btn-nice'%> </div>
+        <div class="text-center mg-16px"> <%= link_to 'View this haunting', haunting_path(haunting), class: 'btn btn-haunting'%> </div>
       </div>
       </div>
     <% end %>
